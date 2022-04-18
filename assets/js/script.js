@@ -1,9 +1,13 @@
+// Implements game when start button is pressed
 function startGame() {
     gameTime();
 }
 
+// Variables
 var loop = 0
 var tileVisible = true;
+var score = 0;
+
 
 function gameTime() {
     tileVisible = !tileVisible;
@@ -11,7 +15,7 @@ function gameTime() {
     flashTile();
     loop++;
     if (loop < 12) {
-        setTimeout(gameTime, 2000);
+        setTimeout(gameTime, 1500);
     } else {
         alert("Game Over..!")
     }
