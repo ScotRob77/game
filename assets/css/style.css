@@ -22,6 +22,14 @@ body {
     text-align: center;
 }
 
+.tile-hidden {
+    display: none
+}
+
+.tile-visible {
+    display: block;
+}
+
 .start {
     text-align: center;
 }
