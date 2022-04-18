@@ -8,8 +8,17 @@ body {
     border: 1px solid black;
     background-color: coral;
     height: 350px;
-    
     margin: 30px;
+    text-align: center;
+}
+
+.game-tile {
+    background-color: aqua;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
     text-align: center;
 }
 
