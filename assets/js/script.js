@@ -1,3 +1,29 @@
+const heroes = [
+    {
+        name: "Hulk",
+        image: "../assets/images/hulk.png/",
+    },
+    {
+        name : "Thor",
+        image : "https://pixabay.com/images/id-6192858/",
+    },
+    {
+        name : "Captain America",
+        image: "https://pixabay.com/images/id-6217287/",
+    },
+    {
+        name : "Vision",
+        image : "https://pixabay.com/images/id-6216730/",
+    },
+    {
+        name : "Wanda",
+        image : "https://pixabay.com/images/id-6192856/",
+    },
+    {
+        name : "Thanos",
+        image : "https://pixabay.com/images/id-4203843/"
+    }
+]
 // Implements game when start button is pressed
 function startGame() {
     gameTime();
@@ -12,7 +38,6 @@ var score = 0;
 function gameTime() {
     tileVisible = !tileVisible;
     createHeroesVillans();
-    flashTile();
     loop++;
     if (loop < 12) {
         setTimeout(gameTime, 1500);
@@ -21,25 +46,26 @@ function gameTime() {
     }
 }
 
-function flashTile() {
-    var  board = document.getElementById("game-board");
-    var classToSet = tileVisible ? "tile visible" : "tile hidden";
-    for(var i = 0; i < 6; i++) {
-        board.children[i].className = classToSet;
-    }
-}
-
 function createHeroesVillans() {
-    var  board = document.getElementById("game-board");
-    for(var i = 0; i < 6; i++) {
-    board.children[i].innerHTML = "Hero";
-    board.children[i].onclick = function() {
-        score += -2;
-    }
+    var board = document.getElementById("game-board");
+    var classToSet = tileVisible ? "tile visible" : "tile hidden";
+    for (var i = 0; i < 6; i++) {
+        board.children[i].className = classToSet;
+        board.children[i].innerHTML = "heroes";
+        board.children[i].onclick = function () {
+            score += -2;
+        }
     }
     var randomHero = Math.floor(Math.random() * 6) + 1;
-    board.children[randomHero-1].innerHTML = "Villain";
-    board.children[randomHero-1].onclick = function() {
+    board.children[randomHero - 1].innerHTML = "Villain";
+    board.children[randomHero - 1].onclick = function () {
         score++;
     }
+    board.children[randomHero-1].className = classToSet + " villain";
 }
+
+
+
+
+
+

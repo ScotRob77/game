@@ -13,7 +13,8 @@ body {
 }
 
 .tile {
-    background-color: aqua;
+    background: url(../images/hulk.png);
+    background-size: cover;
     width: 150px;
     height: 150px;
     padding: 10px;
@@ -36,4 +37,9 @@ body {
 
 #start-game {
     text-align: center;
+}
+
+.villain {
+    background: url(../images/thanos-4203843_1920.png);
+    background-size: cover;
 }
