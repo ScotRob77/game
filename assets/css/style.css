@@ -13,7 +13,7 @@ body {
 }
 
 .tile {
-    background: url(../images/hulk.png);
+    background: url(../images/thor.png);
     background-size: cover;
     width: 150px;
     height: 150px;
@@ -40,6 +40,9 @@ body {
 }
 
 .villain {
-    background: url(../images/thanos-4203843_1920.png);
+    background: url(../images/loki.png);
     background-size: cover;
+    
+    
+    
 }
