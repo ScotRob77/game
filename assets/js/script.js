@@ -38,10 +38,11 @@ function gameTime() {
     tileVisible = !tileVisible;
     createHeroesVillans();
     loop++;
-    if (loop < 12) {
-        setTimeout(gameTime, 1500);
-    } else {
+    if (loop < 20) {
+        setTimeout(gameTime, tileVisible ? 1000 : 3000);
+    } else  {
         alert("You scored " + score)
+        window.location.reload()
     }
 }
 
@@ -62,4 +63,6 @@ function createHeroesVillans() {
     }
     board.children[randomHero - 1].className = classToSet + " villain";
 }
+
+
 
