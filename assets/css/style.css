@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -6,6 +8,8 @@ body {
     background-size: 100%;
     background-position: center;
     background-attachment: fixed;
+    font-family: 'Tapestry', cursive;
+    
 }
 
 .heading {
