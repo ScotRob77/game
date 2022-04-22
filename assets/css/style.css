@@ -3,8 +3,9 @@ body {
     padding: 0;
     border: 0;
     background-image: url(../images/valhalla.jpg);
-    background-size: auto;
+    background-size: 100%;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .heading {
@@ -20,7 +21,6 @@ body {
 }
 
 #game-board {
-    border: 5px solid white;
     margin: 30px;
     text-align: center;
 }
@@ -55,7 +55,13 @@ body {
 .villain {
     background: url(../images/loki.png);
     background-size: cover;
+}
 
+/* Media queries */
 
+@media screen and (max-width:650px) {
+    #game-board {
+        height: 600px;
 
+    }
 }
