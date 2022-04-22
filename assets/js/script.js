@@ -24,8 +24,24 @@ const heroes = [{
     }
 ]
 // Implements game when start button is pressed
+
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") == "easy") {
+                easyGame()
+            } else {
+                this.getAttribute("hard");
+                hardGame();
+            }
+        })
+    }
+})
+
 function startGame() {
-    gameTime();
+ gameTime();
 }
 
 // Variables
@@ -34,12 +50,24 @@ var tileVisible = true;
 var score = 0;
 
 
-function gameTime() {
+function easyGame() {
     tileVisible = !tileVisible;
     createHeroesVillans();
     loop++;
     if (loop < 20) {
-        setTimeout(gameTime, tileVisible ? 1000 : 3000);
+        setTimeout(easyGame, tileVisible ? 3000 : 6000);
+    } else  {
+        alert("You scored " + score)
+        window.location.reload()
+    }
+}
+
+function hardGame() {
+    tileVisible = !tileVisible;
+    createHeroesVillans();
+    loop++;
+    if (loop < 20) {
+        setTimeout(hardGame, tileVisible ? 1000 : 3000);
     } else  {
         alert("You scored " + score)
         window.location.reload()
