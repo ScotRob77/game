@@ -24,7 +24,7 @@ const heroes = [{
     }
 ]
 // Implements game when start button is pressed
-
+/*
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         })
     }
-})
+}) */
 
-function startGame() {
+/*function startGame() {
  gameTime();
-}
+}*/
 
 // Variables
 var loop = 0
@@ -55,7 +55,7 @@ function easyGame() {
     createHeroesVillans();
     loop++;
     if (loop < 20) {
-        setTimeout(easyGame, tileVisible ? 3000 : 6000);
+        setTimeout(easyGame, tileVisible ? 2000 : 3000);
     } else  {
         alert("You scored " + score)
         window.location.reload()
@@ -67,7 +67,7 @@ function hardGame() {
     createHeroesVillans();
     loop++;
     if (loop < 20) {
-        setTimeout(hardGame, tileVisible ? 1000 : 3000);
+        setTimeout(hardGame, tileVisible ? 1000 : 2500);
     } else  {
         alert("You scored " + score)
         window.location.reload()
@@ -87,7 +87,7 @@ function createHeroesVillans() {
     var randomHero = Math.floor(Math.random() * 6) + 1;
     board.children[randomHero - 1].innerHTML = "";
     board.children[randomHero - 1].onclick = function () {
-        score++;
+        score += 10;
     }
     board.children[randomHero - 1].className = classToSet + " villain";
 }
